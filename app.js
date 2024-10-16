@@ -1,7 +1,4 @@
-// 1. Mahsulotlarni Sortlash.
-// Vazifa: Berilgan mahsulotlarni narx yoki sotuv soni bo 'yicha tartiblash. Kirish: Mahsulotlar ro'
-// yxatidagi obyektlarni tanlang va foydalanuvchi
-// belgilagan tartib bo 'yicha saralang ( asc yoki desc ).
+// 1-MISOL. Berilgan mahsulotlarni narx yoki sotuv soni bo 'yicha tartiblash.
 
 // SOLUTION
 
@@ -31,7 +28,7 @@
 // const sortProductsSalesDesc = products.sort((a, b) => b.sales - a.sales);
 // console.log("Sotuv bo'yicha kamayuvchi(Ascending):", sortProductsSalesDesc);
 
-// 2-Masala. Talabalarning baholarini hisoblang va o'rtacha bahosi 70 dan past bo'lganlarni ro'yxatlang.
+// 2-MISOL. Talabalarning baholarini hisoblang va o'rtacha bahosi 70 dan past bo'lganlarni ro'yxatlang.
 
 // SOLUTION
 
@@ -47,3 +44,32 @@
 //     return calcAverage < 70;
 // });
 // console.log(belowAverage);
+
+// 3 - MISOL.  Mahsulotlarning narxi va miqdoriga qarab, har bir mahsulotning umumiy summasini hisoblang.
+
+// SOLUTION
+
+// const products = [
+//     { name: "Laptop", price: 1000, quantity: 2 },
+//     { name: "Phone", price: 500, quantity: 3 },
+//     { name: "Shoes", price: 100, quantity: 4 },
+// ];
+// const totalPrice = products.map((product) => {
+//     const total = product.price * product.quantity;
+//     return { name: product.name, total: total };
+// });
+// console.log(totalPrice);
+
+// 4 - MISOL. Mahsulotlarning narxi, miqdori va soliqlariga qarab umumiy narxni hisoblang.
+
+// const products = [
+//     { name: "Laptop", price: 1000, quantity: 2, tax: 100 },
+//     { name: "Phone", price: 500, quantity: 3, tax: 50 },
+//     { name: "Shoes", price: 100, quantity: 4, tax: 10 },
+// ];
+
+// const totalPrice = products.map((product) => {
+//     const total = product.quantity * (product.price + product.tax);
+//     return { name: product.name, total: total };
+// });
+// console.log(totalPrice);
