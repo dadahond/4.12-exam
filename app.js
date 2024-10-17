@@ -73,3 +73,96 @@
 //     return { name: product.name, total: total };
 // });
 // console.log(totalPrice);
+
+// 5-MISOL. Har bir muallifning yozgan kitoblarini ro'yxatlang va har bir muallifni faqat bir marta ko'rsating.
+
+// SOLUTION
+
+// const books = [
+//     { title: "Book A", author: "Author A" },
+//     { title: "Book B", author: "Author A" },
+//     { title: "Book C", author: "Author B" },
+//     { title: "Book D", author: "Author C" },
+// ];
+// let listOfBooks = [];
+// let listOfAuthors = [];
+// for (let book of books) {
+//     listOfBooks.push(book.title);
+// }
+// for (let book of books) {
+//     if (!listOfAuthors.includes(book.author)) {
+//         listOfAuthors.push(book.author);
+//     }
+// }
+// console.log("Kitoblar ro'yxati:", listOfBooks);
+// console.log("Avtorlar:", listOfAuthors);
+
+// 6 - MISOL.Tadbirlarning sanalarini eski yoki yangi sanalar bo 'yicha saralang.
+
+// const dates = [
+//     { event: "Event A", date: new Date("2023-10-01") },
+//     { event: "Event B", date: new Date("2022-12-15") },
+//     { event: "Event C", date: new Date("2024-01-10") },
+// ];
+// const sanalar = dates.sort((a, b) => a.date - b.date);
+// console.log(sanalar);
+
+// 7 - MISOL.Berilgan mahsulotlarning o 'rtacha narxini hisoblang.
+
+// const products = [
+//     { name: "Laptop", price: 1000 },
+//     { name: "Phone", price: 500 },
+//     { name: "Shoes", price: 100 },
+// ];
+// const totalPrice = products.reduce((acc, curVal) => acc + curVal.price, 0);
+// const averagePrice = totalPrice / products.length;
+
+// console.log(
+//     "Maxsulotlarning o'rtacha narxi yaxlitlanganda:",
+//     Math.round(averagePrice)
+// );
+
+// 8-MISOL. Kitoblarni chop etilgan yil bo'yicha tartiblang (ko'tarilish yoki tushish
+// tartibida).
+
+// SOLUTION
+// const books = [
+//     { title: "Book A", year: 2001 },
+//     { title: "Book B", year: 1995 },
+//     { title: "Book C", year: 2010 },
+//     { title: "Book D", year: 2020 },
+// ];
+// const byPublishedYear = books.sort((a, b) => a.year - b.year);
+// console.log("Chop etilgan yili:", byPublishedYear);
+
+// 9-MISOL. Berilgan mahsulotlar ro'yxatidagi barcha mahsulotlarni sotildi deb
+// belgilang.
+
+// const products = [
+//     { name: "Laptop", price: 1000, sold: false },
+//     { name: "Phone", price: 500, sold: false },
+//     { name: "Shoes", price: 100, sold: false },
+// ];
+// products.map(allSold);
+
+// function allSold(product) {
+//     product.sold = true;
+// }
+// console.log(products);
+
+// 10 - MISOL.Berilgan mahsulotlarning jami miqdorini hisoblang.
+
+// const products = [
+//     { name: "Laptop", price: 1000, quantity: 2 },
+//     { name: "Phone", price: 500, quantity: 3 },
+//     { name: "Shoes", price: 100, quantity: 4 },
+// ];
+// const jamiSoni = products
+//     .map((jami) => jami.quantity)
+//     .reduce((acc, curVal) => acc + curVal);
+// const jamiNarxi = products
+//     .map((jami) => jami.price * jami.quantity)
+//     .reduce((acc, curVal) => acc + curVal);
+
+// console.log("Soni bo'yicha miqdori:", jamiSoni);
+// console.log("Jami narxi:", jamiNarxi);
