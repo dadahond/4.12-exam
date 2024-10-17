@@ -166,3 +166,30 @@
 
 // console.log("Soni bo'yicha miqdori:", jamiSoni);
 // console.log("Jami narxi:", jamiNarxi);
+
+// 11 - MISOL. Bir xil nomdagi mahsulotlarni birlashtirib, ularning miqdorini jamlang.
+
+// const products = [
+//     { name: "Laptop", quantity: 2 },
+//     { name: "Phone", quantity: 3 },
+//     { name: "Laptop", quantity: 1 },
+//     { name: "Shoes", quantity: 4 },
+// ];
+// let newList = [];
+// for (let product of products) {
+//     if (newList.includes(product.name)) {
+//         ;
+//     }
+// }
+// console.log(newList);
+
+// 12 - MISOL.Mahsulotlarni toifalar bo 'yicha guruhlang.
+// const products = [
+//     { name: "Laptop", category: "Electronics" },
+//     { name: "Phone", category: "Electronics" },
+//     { name: "Shoes", category: "Fashion" },
+// ];
+// const byName = products.map((nom) => nom.name);
+// const byCategory = products.map((cat) => cat.category);
+// console.log("Nomlari bo'yicha:", byName);
+// console.log("Kategoriyalari bo'yicha:", byCategory);
