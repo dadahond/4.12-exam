@@ -84,18 +84,16 @@
 //     { title: "Book C", author: "Author B" },
 //     { title: "Book D", author: "Author C" },
 // ];
-// let listOfBooks = [];
-// let listOfAuthors = [];
-// for (let book of books) {
-//     listOfBooks.push(book.title);
-// }
-// for (let book of books) {
-//     if (!listOfAuthors.includes(book.author)) {
-//         listOfAuthors.push(book.author);
+// const result = books.reduce((acc, curVal) => {
+//     const item = acc.find((book) => curVal.author == book.author);
+//     if (item) {
+//         item.books.push(curVal.title);
+//     } else {
+//         acc.push({ author: curVal.author, books: [curVal.title] });
 //     }
-// }
-// console.log("Kitoblar ro'yxati:", listOfBooks);
-// console.log("Avtorlar:", listOfAuthors);
+//     return acc;
+// }, []);
+// console.log(result);
 
 // 6 - MISOL.Tadbirlarning sanalarini eski yoki yangi sanalar bo 'yicha saralang.
 
@@ -175,13 +173,16 @@
 //     { name: "Laptop", quantity: 1 },
 //     { name: "Shoes", quantity: 4 },
 // ];
-// let newList = [];
-// for (let product of products) {
-//     if (newList.includes(product.name)) {
-//         ;
+// const result = products.reduce((acc, curVal) => {
+//     const item = acc.find((product) => curVal.name == product.name);
+//     if (item) {
+//         item.quantity = item.quantity + curVal.quantity;
+//     } else {
+//         acc.push({ name: curVal.name, quantity: curVal.quantity });
 //     }
-// }
-// console.log(newList);
+//     return acc;
+// }, []);
+// console.log(result);
 
 // 12 - MISOL.Mahsulotlarni toifalar bo 'yicha guruhlang.
 // const products = [
